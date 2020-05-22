@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background: #ccc;
+}
+
+.container {
+  width: 100%;
+  background-color: rgb(51, 49, 49);
+}
+
+.nav ul{  
+  text-align: center;
+  width: 100%;
+}
+
+.nav ul:after { 
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav ul li {
+list-style-type: none; 
+display: inline-block;
+}
+
+.nav a {
+text-decoration: none;
+padding: 0 0.5em; 
+margin: 0.6em; 
+font-size: 16px;
+font-family: Helvetica;
+color: lightgrey;
+display: inline-block;
+}
+
+.divider-pipe-symbol li::after {
+  content: "|";
+  color: lightgrey;
+}
+
+.divider-pipe-symbol li:last-child::after {
+  content: "";
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* portrait tablets, portrait iPad, e-readers */
+@media screen and (max-width: 640px) {
+  body {
+    background-color: lightblue;
+  }
+  .divider-pipe-symbol li::after {
+    display: none;
+  }
+  .nav li {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* smartphones, Android phones */
+@media screen and (max-width: 480px) {
+  body {
+    background-color: rgb(186, 122, 199);
+  }
+  .divider-pipe-symbol li::after {
+    display: none;
+  }
+  .nav li {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+  
+
+
